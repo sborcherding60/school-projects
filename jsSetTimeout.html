@@ -1,0 +1,33 @@
+
+<!doctype html>
+<!--  Programmer(s): sHerrick
+      Date: 4/10/19
+      coding test-->
+<html lang="en">
+<meta charset="utf-8">
+<head>
+<title>setTimeout</title>
+<script>
+var tmId;
+function winOnLoad()
+{
+	tmId = setTimeout("alert('Times Up!')",4000);
+	alert("Timer Set");
+}
+
+
+
+//click the button before the alert for the alert displays for Times Up
+function butStopTimer()
+{
+	clearTimeout(tmId);
+	alert("Timer has been cleared");
+}
+</script>
+<body onload="winOnLoad()">
+<form>
+	<input type="button" value="Stop Timer" onclick="return butStopTimer()">
+</form>
+
+</body>
+</html>
